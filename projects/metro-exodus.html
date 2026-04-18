@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metro Exodus — Andrii Krasavin</title>
+  <meta name="description" content="Editorial placeholder case study for Metro Exodus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-text">Andrii Krasavin</span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html#projects">Back to portfolio</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="project-hero section" id="hero">
+      <div class="container project-shell">
+        <div class="project-header reveal">
+          <p class="project-kicker">Project</p>
+          <h1 class="project-title">Metro Exodus</h1>
+          <p class="project-summary">Third installment in Metro series bringing players outside of the ruined moscow</p>
+        </div>
+
+        <div class="hero-split">
+          <div class="project-hero-image project-image-1 reveal delay-1 hero-slot">
+            <img src="../assets/Metro/metro_project.jpg" alt="Metro Exodus hero image" class="case-image" />
+          </div>
+
+          <div class="project-meta-stacked reveal delay-2">
+            <div class="meta-card">
+              <span class="stat-label">Studio</span>
+              <strong>4A Games Ltd</strong>
+            </div>
+            <div class="meta-card">
+              <span class="stat-label">Timeline</span>
+              <strong>2018–2019</strong>
+            </div>
+            <div class="meta-card">
+              <span class="stat-label">Role</span>
+              <strong>Senior Game/Level Designer</strong>
+            </div>
+            <div class="meta-card">
+              <span class="stat-label">Engine</span>
+              <strong>4A Engine</strong>
+            </div>
+            <div class="meta-card">
+              <span class="stat-label">Contributions</span>
+              <strong>Level design for major locations, Encounter design for unique archetypes, Environment art, Visual Scripting of Narrative elements, Main menu logic and art</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview + Screenshots -->
+    <section class="section">
+      <div class="container project-section">
+        
+        <!-- Bordered Box Opens Here -->
+        <div class="project-copy reveal">
+          
+          <h2>Main menu</h2>
+          <div style="height: 1px; background: var(--line); margin: 12px 0;"></div>
+          <p>It started with a request to create a menu that was built in the separate environment, like the menus we had in previous Metro games. We started with a concept of a train cabin, but I wanted to telegraph the journey theme of the game in the menu as well, so I’ve created a prototype of the cabin in different environments and pitched it to Creative Leads. They confirmed it and it grew up into four seasons for the menu environment that change throughout the game. I also added a lot of dynamic elements, that change with each environment to show some props that we found through our journey and state of Anna’s health.</p>
+          <p>Technically it was a cabin with camera attached that was teleported to the correct environment depending on the current save file. I’ve created all the scenes on one level as rooms with correct backgrounds.</p>
+
+          <!-- Divider line -->
+          <div style="height: 1px; background: var(--line); margin: 24px 0;"></div>
+
+          <!-- Changing to standard 2-col grid for the 2x2 bottom layout -->
+          <div class="thumbnail-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+            
+            <!-- Image 1: Forced to span full width (both columns) -->
+            <a href="#" data-src="../assets/Metro/Menu/menu_base.png" class="thumbnail-link lightbox-trigger" style="grid-column: 1 / -1;">
+              <div class="project-hero-image" style="aspect-ratio: 21 / 9;">
+                <img src="../assets/Metro/Menu/menu_base.png" alt="Metro Exodus Menu screenshot 1" class="case-image" />
+              </div>
+            </a>
+
+            <!-- Images 2-5: Normal 2x2 grid -->
+            <a href="#" data-src="../assets/Metro/Menu/menu_spring.png" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/Menu/menu_spring.png" alt="Metro Exodus Menu screenshot 2" class="case-image" />
+              </div>
+            </a>
+
+            <a href="#" data-src="../assets/Metro/Menu/menu_summer.png" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/Menu/menu_summer.png" alt="Metro Exodus Menu screenshot 3" class="case-image" />
+              </div>
+            </a>
+
+            <a href="#" data-src="../assets/Metro/Menu/menu_autumn.png" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/Menu/menu_autumn.png" alt="Metro Exodus Menu screenshot 4" class="case-image" />
+              </div>
+            </a>
+
+            <a href="#" data-src="../assets/Metro/Menu/menu_winter.png" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/Menu/menu_winter.png" alt="Metro Exodus Menu screenshot 5" class="case-image" />
+              </div>
+            </a>
+
+          </div>
+          
+        </div>
+        <!-- Bordered Box Closes Here -->
+
+      </div>
+    </section>
+
+    <!-- Section: Yamantau -->
+    <section class="section">
+      <div class="container project-section">
+        <div class="project-copy reveal">
+
+          <!-- Header & Kicker -->
+          <h2>Yamantau</h2>
+          <p class="project-kicker"></p>
+          
+          <!-- Divider -->
+          <div style="height: 1px; background: var(--line); margin: 12px 0 24px 0;"></div>
+
+          <!-- Content Stack -->
+          <div style="display: grid; gap: 24px;">
+
+            <!-- Text -->
+            <div style="display: grid; gap: 16px;">
+              <p>This level was quite different to the rest of the game that used open world approach. Yamantau presented Cannibals as a unique enemy archetype and needed more classical approach with "shoot your way through and save the princess" dynamic.</p>
+              <p>I was responsible for the full production of the level shown on the video. Starting from blockout and encounter setup finishing with environment art, scripting all level events, unique mechanics and features and a boss fight.</p>
+              <p>By the narrative cannibals were ex-prisoners mixed with russian goverment, so I decided to create an atmosphere of strict hierarchy and constant fear that drives their insanity. This level contains a lot of easter eggs from that culture to support the atmosphere.</p>
+              <p>I really wanted to have interesting behavior for them and we needed it for "cheap" in terms of production. I’ve played a lot of games to catch the vibe of more chaotic and savage-like combat, but the biggest reference that I’ve used was original Rage from ID Software. Enemies there were jumping of the walls and used level geometry heavily in their movement to hide that they have only one goal – to reach the player and make a hit with a melee weapon. We captured some animations and created the prototype in the fresh location that was a connective tissue between barracks and kitchen – the freezer where they stored the bodies of their victims.</p>
+              <p>When the initial graybox and iteration of the gameplay were approved, I’ve started to create the atmosphere of the location, filling it with details. On the kitchen Players can find body parts and household assets that they stole from incoming caravans. Freezer got a separate cold gamma and cold steam particles to block the vision a bit. Armory hid some collectables and all the weapons that cannibals used. Barracks were separated to fulfil the narrative about cannibals’ origin – they were prisoners. I’ve read a lot about the soviet prisons and their habits and tried to recreate it in the level. So, it was divided into separate rooms with the respect of hierarchy. The “boss” had his own luxury, while lowest goons were sleeping on a floor closer to the toilet etc.</p>
+              <p>The structure of the level with divided chunks and engine tools for optimization let me to create this super detailed environment that contains a lot of references and easter eggs.</p>
+              <p>Aside from this I did the boss battle with another unique archetype – heavy machine gunner. I’ve decided to create a unique mechanic that was presented earlier in the level – player could shoot pipes to create a pressured steam burst, that killed regular enemies and made a critical hit to the boss.</p>
+            </div>
+
+            <!-- Video -->
+            <div class="project-hero-image video-embed" style="aspect-ratio: 16 / 9; min-height: auto; padding: 0;">
+              <iframe src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_1" 
+                      title="Yamantau Metro Exodus" 
+                      loading="lazy" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- 3 Screenshots (3-Column Grid) -->
+            <div class="thumbnail-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+              <a href="#" data-src="../assets/Metro/Yamantau/y_photo.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Yamantau/y_photo.jpg" alt="Feature screenshot 1" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/Yamantau/y1.png" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Yamantau/y1.png" alt="Feature screenshot 2" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/Yamantau/y2.png" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Yamantau/y2.png" alt="Feature screenshot 3" class="case-image" />
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Novosibirsk -->
+    <section class="section">
+      <div class="container project-section">
+        <div class="project-copy reveal">
+
+          <!-- Header & Kicker -->
+          <h2>Novosibirsk</h2>
+          <p class="project-kicker"></p>
+          
+          <!-- Divider -->
+          <div style="height: 1px; background: var(--line); margin: 12px 0 24px 0;"></div>
+
+          <!-- Content Stack -->
+          <div style="display: grid; gap: 24px;">
+
+            <!-- Text -->
+            <div style="display: grid; gap: 16px;">
+              <p>Novosibirsk is the biggest linear level in the game and internally it was separated in three parts divided between Bohdan Gontar, Oleksii Panchenko and me. My part of level already had a blockout ready and my task was to fill it with art, create needed atmosphere with scripted events and set dressing and lead Players to the game ending. </p>
+              <p>While previous parts of the level were filled with narrative and encounters, the ending part was more about emotions – fear of loss and survival. I’ve decided to use Artyom’s wife – Anna as a main element for the fear of loss, because she got deadly sick before, and we came to Novosibirsk in search of medicine. I used her as a hallucination from a radiation exposure frequently and tried to remind Players what is our ultimate goal here and how it changed during the game and suddenly became more personal.</p>
+              <p>Novosibirsk was unique to Metro because of its own vibe – untouched apocalypse. By the story the Moscow was nuked, and Novosibirsk was bombed with dirty bomb, which led to absence of destruction throughout the city. I studied Fukushima and Chernobyl to create this unique atmosphere of abandoned city and tried to preserve it throughout Player’s journey.</p>
+              <p>The only encounters that were in this part of the level aside from constant fight with time and radiation is the return of Librarians from Metro 2033. I needed to provide Players with room and create the understanding of the main rule to remain silent without any hint, voice line or note.</p>
+              <p>Every bit of my work created that buildup for the ending that we needed, and I feel grateful to take part in this story.</p>
+            </div>
+
+            <!-- Video -->
+            <div class="project-hero-image video-embed" style="aspect-ratio: 16 / 9; min-height: auto; padding: 0;">
+              <iframe src="https://www.youtube-nocookie.com/embed/FPs3v_en1KY?si=hqMJ2EpI4o3JVnDB" 
+                      title="Novosibirsk Metro Exodus" 
+                      loading="lazy" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- 3 Screenshots (3-Column Grid) -->
+            <div class="thumbnail-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+              <a href="#" data-src="../assets/Metro/Novosib/nov_1.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Novosib/nov_1.jpg" alt="Feature screenshot 1" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/Novosib/nov_2.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Novosib/nov_2.jpg" alt="Feature screenshot 2" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/Novosib/nov_3.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/Novosib/nov_3.jpg" alt="Feature screenshot 3" class="case-image" />
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Two Colonels -->
+    <section class="section">
+      <div class="container project-section">
+        <div class="project-copy reveal">
+
+          <!-- Header & Kicker -->
+          <h2>Two Colonels</h2>
+          <p class="project-kicker"></p>
+          
+          <!-- Divider -->
+          <div style="height: 1px; background: var(--line); margin: 12px 0 24px 0;"></div>
+
+          <!-- Content Stack -->
+          <div style="display: grid; gap: 24px;">
+
+            <!-- Text -->
+            <div style="display: grid; gap: 16px;">
+              <p>Right after we finished the work on patches for the game, we started the development of the first DLC that continued the story of Novosibirsk and covered the events that happened before Artyom and Miller get there. We were introducing completely new character – Colonel Hlebnikov.</p>
+              <p>With initial concept done on paper and flow set, we decided to divide the locations by designers as usual. I chose the beginning of the story, where we were introduced to a new character and our new weapon – flamethrower.</p>
+              <p>I wanted to make the flamethrower feel as a heavy and deadly weapon, that impacts mobility of the character, but at the same time has an impact on environment. I made player much slower, not so agile and set every door on the level to be opened either by push of the character’s body or bashed by foot.</p>
+              <p>Players had a goal to clean the slime that built up in the sewers and we made special assets that reacted to the flamethrower, so players needed to burn through them constantly. It created some challenge for the lightning of the level, because of the burning environment, especially after we were left with black burned-out gunk. But by accident I found out, that I can put torchlights on walls, and they will react to flamethrower and light up. That was a cool exploration of how even non-systemic mechanics can work together. After this I populated them on level and cheated a bit by enlarging their trigger compared to a regular torchlight, so they will be activated by flames in almost guaranteed way.</p>
+              <p>Another big part of the level were worms, that were upgraded compared to a main game. We worked closely in collaboration with AI designer – Mikhail Stupnikov, to create “cheap”, but cool enemy that will terrorize Players in these 20 minutes of playtime.</p>
+            </div>
+
+            <!-- Video -->
+            <div class="project-hero-image video-embed" style="aspect-ratio: 16 / 9; min-height: auto; padding: 0;">
+              <iframe src="https://www.youtube-nocookie.com/embed/pD7gapaoeIM?si=zVfyY1YX-8XT7fem" 
+                      title="Two Colonels Metro Exodus" 
+                      loading="lazy" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- 3 Screenshots (3-Column Grid) -->
+            <div class="thumbnail-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+              <a href="#" data-src="../assets/Metro/twocolonels/tc1.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/twocolonels/tc1.jpg" alt="Feature screenshot 1" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/twocolonels/tc2.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/twocolonels/tc2.jpg" alt="Feature screenshot 2" class="case-image" />
+                </div>
+              </a>
+              <a href="#" data-src="../assets/Metro/twocolonels/tc3.jpg" class="thumbnail-link lightbox-trigger">
+                <div class="project-hero-image" style="aspect-ratio: 16 / 9; padding: 0;">
+                  <img src="../assets/Metro/twocolonels/tc3.jpg" alt="Feature screenshot 3" class="case-image" />
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketing Screenshots -->
+    <section class="section">
+      <div class="container project-section">
+        
+        <!-- Bordered Box Opens Here -->
+        <div class="project-copy reveal">
+          
+          <h2>Marketing screenshots</h2>
+
+          <!-- Divider line -->
+          <div style="height: 1px; background: var(--line); margin: 12px 0;"></div>
+
+          <p>Made in-engine for Gamescom and press kit purposes.</p>
+
+          <!-- The Gallery is now INSIDE project-copy -->
+          <div class="thumbnail-grid">
+            
+            <a href="#" data-src="../assets/Metro/gamescom_wall1.jpg" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/gamescom_wall1.jpg" alt="Metro Exodus Menu screenshot 1" class="case-image" />
+              </div>
+            </a>
+
+            <a href="#" data-src="../assets/Metro/gamescom_2.png" class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image">
+                <img src="../assets/Metro/gamescom_2.png" alt="Metro Exodus Menu screenshot 2" class="case-image" />
+              </div>
+            </a>
+
+          </div>
+          
+        </div>
+        <!-- Bordered Box Closes Here -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Andrii Krasavin</p>
+      <a href="#hero">Top</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Media preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-video" id="lightbox-video"></div>
+  </div>
+
+  <script src="../assets/script.js" defer></script>
+
+</body>
+</html>

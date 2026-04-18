@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Playthroughs & Media — Andrii Krasavin</title>
+<meta name="description" content="Editorial placeholder case study for portfolio media." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="../index.html">
+<span class="brand-text">Andrii Krasavin</span>
+</a>
+<nav class="main-nav">
+<a href="../index.html#projects">Back to portfolio</a>
+</nav>
+<button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+<span aria-hidden="true">◐</span>
+</button>
+</div>
+</header>
+<main id="main">
+
+  <!-- Hero Section -->
+  <section class="project-hero section" id="hero">
+    <div class="container project-shell">
+      <div class="project-header reveal">
+        <p class="project-kicker">Miscellaneous</p>
+        <h1 class="project-title">Other media</h1>
+      </div>
+
+  <!-- Video links -->
+  <section class="section">
+    <div class="container project-section">
+      <div class="project-copy reveal" style="display: grid; gap: 32px;">
+
+        <!-- Entry 1 -->
+        <div>
+          <p class="project-kicker">Video</p>
+          <h2>Panel at Oculus Connect 3</h2>
+          <div style="height: 1px; background: var(--line); margin: 16px 0 24px;"></div>
+          <div class="thumbnail-grid">
+            <a href="#"
+               data-type="video"
+               data-src="https://www.youtube-nocookie.com/embed/wOt9b1BP_6s?si=3wn8E2_2QXFfdT8D&autoplay=1"
+               class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image video-thumb">
+                <img src="https://img.youtube.com/vi/wOt9b1BP_6s/maxresdefault.jpg" alt="Oculus Connect 3 panel" class="case-image" />
+                <span class="play-icon">▶</span>
+              </div>
+              <div class="thumb-caption">
+                <span class="thumb-title">Solving the First Person Shooter in VR</span>
+                <span class="thumb-desc">I had a chance to share and represent ideas behind Arktika.1 design and discuss the wild west of shooters in the early stage of VR.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider between entries -->
+        <div style="height: 1px; background: var(--line);"></div>
+
+        <!-- Entry 2 -->
+        <div>
+          <p class="project-kicker">Video</p>
+          <h2>Segment on Ukrainian TV about 4A-Games</h2>
+          <div style="height: 1px; background: var(--line); margin: 16px 0 24px;"></div>
+          <div class="thumbnail-grid">
+            <a href="#"
+               data-type="video"
+               data-src="https://www.youtube-nocookie.com/embed/PdfjumNWIiY?si=mybBW8geDlzK-m4R&start=1067&autoplay=1"
+               class="thumbnail-link lightbox-trigger">
+              <div class="project-hero-image video-thumb">
+                <img src="https://img.youtube.com/vi/PdfjumNWIiY/maxresdefault.jpg" alt="QTV 4A-Games segment" class="case-image" />
+                <span class="play-icon">▶</span>
+              </div>
+              <div class="thumb-caption">
+                <span class="thumb-title">QTV 4A-Games segment</span>
+                <span class="thumb-desc">This happened at the start of my career and still is a fun watch.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>© <span id="year">
+</span> Andrii Krasavin</p>
+<a href="#hero">Top</a>
+</div>
+</footer>
+
+<script src="../assets/script.js" defer>
+</script>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Media preview">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  <div class="lightbox-video" id="lightbox-video"></div>
+</div>
+
+<!-- Lightbox Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lightbox      = document.getElementById('lightbox');
+    const lightboxImg   = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    if (!lightbox) return;
+
+    document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+      trigger.addEventListener('click', e => {
+        e.preventDefault();
+        const src  = trigger.getAttribute('data-src');
+        const type = trigger.getAttribute('data-type');
+        const img  = trigger.querySelector('img');
+
+        if (type === 'video') {
+          // Video mode
+          lightboxVideo.innerHTML = `<iframe src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+          lightboxVideo.classList.add('is-active');
+          lightbox.classList.add('video-mode');
+          lightboxImg.src = '';
+        } else {
+          // Image mode
+          lightboxImg.src = src;
+          if (img) lightboxImg.alt = img.alt;
+          lightboxVideo.classList.remove('is-active');
+          lightbox.classList.remove('video-mode');
+          lightboxVideo.innerHTML = '';
+        }
+
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open', 'video-mode');
+      lightboxVideo.classList.remove('is-active');
+      lightboxVideo.innerHTML = ''; // Stops video playback immediately
+      setTimeout(() => { lightboxImg.src = ''; }, 200);
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', e => { 
+      if (e.target === lightbox) closeLightbox(); 
+    });
+    
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+  });
+</script>
+
+</body>
+</html>
