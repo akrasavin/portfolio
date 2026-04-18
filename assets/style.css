@@ -151,7 +151,7 @@ h3 {
 }
 
 .site-header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 20;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
