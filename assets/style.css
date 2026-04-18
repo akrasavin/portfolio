@@ -913,18 +913,21 @@ h3 {
   }
 
   .header-inner {
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-    min-height: 48px; /* Reduced from 64px for mobile */
+    grid-template-columns: 1fr auto; /* 2 columns: Nav gets left, Toggle gets right */
+    gap: 4px 12px; /* Small vertical gap to keep the header very thin */
+    min-height: auto;
+    padding: 8px 0;
   }
 
   .brand {
-    min-height: 40px;
+    grid-column: 1 / -1; /* Forces your name to stay on its own top row */
+    min-height: auto;
     font-size: 0.9rem;
   }
 
   .main-nav {
-    grid-column: 1 / -1;
+    grid-column: 1; /* Places the nav buttons on the second row, left side */
+    grid-row: 2;
     justify-content: flex-start;
     gap: 14px;
     overflow-x: auto;
@@ -932,10 +935,12 @@ h3 {
     padding-bottom: 2px;
   }
 
-  .main-nav a {
-    min-height: 40px;
-    white-space: nowrap;
-    font-size: 0.9rem;
+  .theme-toggle {
+    grid-column: 2; /* Places the toggle on the second row, right side */
+    grid-row: 2;
+    align-self: center;
+    width: 36px; /* Slightly smaller to match the height of the nav text */
+    height: 36px;
   }
 
   h1 {
