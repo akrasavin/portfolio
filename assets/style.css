@@ -151,9 +151,9 @@ h3 {
 }
 
 .site-header {
-  position: sticky; /* Make sure this is still sticky */
+  position: sticky;
   top: 0;
-  align-self: start; /* <--- ADD THIS LINE */
+  align-self: start; 
   z-index: 20;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
@@ -171,8 +171,8 @@ h3 {
 .header-inner {
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  min-height: 52px; /* Reduced from 76px */
-  gap: 16px; /* Reduced from 24px */
+  min-height: 52px; 
+  gap: 16px; 
 }
 
 .brand {
@@ -194,9 +194,8 @@ h3 {
 
 .main-nav a {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px; /* Reduced from 44px */
+  display: inline-block; 
+  padding: 4px 0; 
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -205,8 +204,7 @@ h3 {
   content: "";
   position: absolute;
   left: 0;
-  /* Remove the 'bottom' rule and use 'top' instead to push it down from the top edge */
-  top: 100%; 
+  bottom: 0; 
   width: 100%;
   height: 1px;
   background: var(--accent);
