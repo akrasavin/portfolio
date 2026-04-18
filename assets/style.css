@@ -151,8 +151,9 @@ h3 {
 }
 
 .site-header {
-  position: sticky;
+  position: sticky; /* Make sure this is still sticky */
   top: 0;
+  align-self: start; /* <--- ADD THIS LINE */
   z-index: 20;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
