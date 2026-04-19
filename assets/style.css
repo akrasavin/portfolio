@@ -687,9 +687,8 @@ h3 {
   background: var(--surface);
 }
 
-
-.project-copy p + p {
-  margin-top: 16px;
+.project-copy p {
+  margin-bottom: 16px;
 }
 
 
