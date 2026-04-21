@@ -15,34 +15,36 @@ sections.forEach((section) => sectionObserver.observe(section));
 const revealObserver = new IntersectionObserver((entries, observer) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
 reveals.forEach((node) => revealObserver.observe(node));
 // Lightbox
-const lightbox     = document.getElementById('lightbox');
-const lightboxImg  = document.getElementById('lightbox-img');
+const lightbox      = document.getElementById('lightbox');
+const lightboxImg   = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
 
-document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
-  trigger.addEventListener('click', e => {
-    e.preventDefault();
-    lightboxImg.src = trigger.dataset.src;
-    lightboxImg.alt = trigger.querySelector('img').alt;
-    lightbox.classList.add('is-open');
-    document.body.style.overflow = 'hidden'; // Prevents background scroll
+if (lightbox && lightboxImg && lightboxClose) {
+
+  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+    trigger.addEventListener('click', e => {
+      e.preventDefault();
+      lightboxImg.src = trigger.dataset.src;
+      lightboxImg.alt = trigger.querySelector('img').alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
 
-function closeLightbox() {
-  lightbox.classList.remove('is-open');
-  lightboxImg.src = '';
-  document.body.style.overflow = '';
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
 }
-
-lightboxClose.addEventListener('click', closeLightbox);
-
-// Close when clicking the dark backdrop (not the image itself)
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-// Close with Escape key
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
-});
