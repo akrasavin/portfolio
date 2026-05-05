@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <script>
+  (function(){
+    var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+  </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -135,20 +141,15 @@
   <iframe class="cv-frame"
           src="./assets/CV/AndriiKrasavin2026CV.pdf#toolbar=0&navpanes=0&scrollbar=0"
           title="Andrii Krasavin CV"
-          loading="lazy"></iframe>
-
-  <a class="cv-mobile-link"
-     href="./assets/CV/AndriiKrasavin2026CV.pdf"
-     target="_blank"
-     rel="noopener noreferrer">
-    Open CV in new tab
-  </a>
+          loading="lazy">
+  </iframe>
+  <a class="cv-mobile-link btn btn-secondary" ...>Open CV in new tab</a>
 </div>
     <div class="cv-actions cv-desktop-only">
-      <a class="btn btn-secondary" href="./assets/CV/AndriiKrasavin2026CV.pdf" download>Download</a>
-    </div>
-    </div>
+    <a class="btn btn-primary" href="./assets/CV/AndriiKrasavin2026CV.pdf" download>Download</a>
+</div>
   </div>
+</div>
 </section>
 
 
@@ -161,8 +162,8 @@
 <div class="content-card reveal delay-1 contact-panel-box">
 <div class="contact-links">
 <a href="mailto:krasavin75@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/ellingt0n/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a href="https://www.artstation.com/ellington" target="_blank" rel="noopener noreferrer">ArtStation</a>
+<a href="https://www.linkedin.com/in/andriikrasavin//" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://www.artstation.com/akrasavin" target="_blank" rel="noopener noreferrer">ArtStation</a>
 </div>
 </div>
 </div>

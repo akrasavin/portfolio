@@ -4,11 +4,17 @@ const year = document.getElementById('year');
 const navLinks = [...document.querySelectorAll('.main-nav a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reveals = [...document.querySelectorAll('.reveal')];
-let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+let theme = localStorage.getItem('theme') 
+  || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 root.setAttribute('data-theme', theme);
 function renderToggle() { if (!toggle) return; toggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`); toggle.innerHTML = `<span aria-hidden="true">${theme === 'dark' ? '☀' : '☾'}</span>`; }
 renderToggle();
-toggle?.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', theme); renderToggle(); });
+toggle?.addEventListener('click', () => {
+  theme = theme === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  renderToggle();
+});
 if (year) year.textContent = new Date().getFullYear();
 const sectionObserver = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { const current = `#${entry.target.id}`; navLinks.forEach((link) => link.setAttribute('aria-current', link.getAttribute('href') === current ? 'true' : 'false')); } }); }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.05 });
 sections.forEach((section) => sectionObserver.observe(section));
