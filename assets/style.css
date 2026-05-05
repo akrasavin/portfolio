@@ -931,7 +931,10 @@ h3 {
   }
 
   .brand {
-    font-size: 0.82rem;
+  font-size: 0.82rem;
+  width: 40px;          /* ← add: match the toggle exactly */
+  flex-shrink: 0;       /* ← add: prevent flex from resizing it */
+  overflow: hidden; 
   }
 
   .main-nav {
@@ -944,7 +947,7 @@ h3 {
   }
 
   .theme-toggle {
-    width: 36px;
+    width: 40px;
     height: 36px;
   }
 
