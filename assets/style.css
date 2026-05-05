@@ -984,6 +984,7 @@ h3 {
   }
 
   .profile-panel {
+    order: -1; 
     min-height: auto;
     display: flex;
     justify-content: center;  /* center the photo inside */
