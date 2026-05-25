@@ -613,7 +613,18 @@ h3 {
   position: relative;
   z-index: 0;
 }
+/* Center image cropping on mobile devices */
+  .project-card .case-image {
+    object-position: center center !important;
+  }
+/* Center the image frame and its content on mobile devices */
+  .project-image {
+    place-items: center;
+  }
 
+  .case-image {
+    object-position: center;
+  }
 /* =========================
    Thumbnail grid
 ========================= */
@@ -852,6 +863,7 @@ h3 {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+  
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1039,7 +1051,10 @@ h3 {
   .footer-inner {
     grid-template-columns: 1fr;
   }
-
+/* Center image cropping on mobile devices */
+  .project-card .case-image {
+    object-position: center center !important;
+  }
   .thumbnail-grid-3col,
   .thumbnail-grid-4col {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1132,4 +1147,27 @@ h3 {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Force center project images on mobile viewports */
+@media screen and (max-width: 768px) {
+  .project-card .project-image,
+  .project-image {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    place-items: center !important;
+  }
+
+  .project-card .case-image,
+  .case-image {
+    object-fit: cover !important;
+    object-position: center center !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
