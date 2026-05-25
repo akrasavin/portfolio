@@ -8,7 +8,7 @@
   --surface: #e8e8e8;
   --surface-2: #dcdcdc;
   --line: rgba(55, 55, 55, 0.12);
-  --line-strong: rgba(55, 55, 55, 0.20);
+  --line-strong: rgba(55, 55, 55, 0.2);
   --text: #1a1a1a;
   --muted: #4a4a4a;
   --accent: #2a2a2a;
@@ -25,7 +25,7 @@
   --bg: #111111;
   --surface: #1a1a1a;
   --surface-2: #222222;
-  --line: rgba(100, 100, 100, 0.10);
+  --line: rgba(100, 100, 100, 0.1);
   --line-strong: rgba(100, 100, 100, 0.16);
   --text: #e5e5e5;
   --muted: #b0b0b0;
@@ -247,11 +247,8 @@ h3 {
   padding: 12px 16px;
   border-radius: var(--radius-xs);
   border: 1px solid var(--line);
-  transition:
-    transform 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease,
-    color 160ms ease;
+  transition: transform 160ms ease, background 160ms ease,
+    border-color 160ms ease, color 160ms ease;
 }
 
 .btn:hover {
@@ -393,9 +390,7 @@ h3 {
 }
 
 .project-link {
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease,
+  transition: transform 160ms ease, border-color 160ms ease,
     background 160ms ease;
 }
 
@@ -614,17 +609,17 @@ h3 {
   z-index: 0;
 }
 /* Center image cropping on mobile devices */
-  .project-card .case-image {
-    object-position: center center !important;
-  }
+.project-card .case-image {
+  object-position: center center !important;
+}
 /* Center the image frame and its content on mobile devices */
-  .project-image {
-    place-items: center;
-  }
+.project-image {
+  place-items: center;
+}
 
-  .case-image {
-    object-position: center;
-  }
+.case-image {
+  object-position: center;
+}
 /* =========================
    Thumbnail grid
 ========================= */
@@ -863,7 +858,6 @@ h3 {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -916,10 +910,10 @@ h3 {
   }
 
   .brand {
-  font-size: 0.82rem;
-  width: 40px;          /* ← add: match the toggle exactly */
-  flex-shrink: 0;       /* ← add: prevent flex from resizing it */
-  overflow: hidden; 
+    font-size: 0.82rem;
+    width: 40px; /* ← add: match the toggle exactly */
+    flex-shrink: 0; /* ← add: prevent flex from resizing it */
+    overflow: hidden;
   }
 
   .main-nav {
@@ -972,12 +966,12 @@ h3 {
   }
 
   .profile-panel {
-    order: -1; 
+    order: -1;
     min-height: auto;
     display: flex;
-    justify-content: center;  /* center the photo inside */
+    justify-content: center; /* center the photo inside */
     align-items: flex-start;
-    padding: 24px;            /* add this — matches .content-card padding */
+    padding: 24px; /* add this — matches .content-card padding */
   }
 
   .hero-copy {
@@ -985,7 +979,7 @@ h3 {
     border: 1px solid var(--line);
     border-radius: var(--radius-xs);
     box-shadow: var(--shadow-lg);
-    padding: 32px;            /* generous padding like a content card */
+    padding: 32px; /* generous padding like a content card */
   }
 
   .profile-photo {
@@ -1051,7 +1045,7 @@ h3 {
   .footer-inner {
     grid-template-columns: 1fr;
   }
-/* Center image cropping on mobile devices */
+  /* Center image cropping on mobile devices */
   .project-card .case-image {
     object-position: center center !important;
   }
@@ -1094,7 +1088,7 @@ h3 {
   }
 
   .cv-box {
-  padding: 0;
+    padding: 0;
   }
 
   .contact-links {
