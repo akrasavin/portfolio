@@ -201,13 +201,19 @@ h3 {
 }
 
 .main-nav a:hover,
-.main-nav a[aria-current="true"] {
+.main-nav a[aria-current="true"],
+.brand[aria-current="true"] {
   color: var(--text);
 }
 
 .main-nav a:hover::after,
 .main-nav a[aria-current="true"]::after {
   transform: scaleX(1);
+}
+
+.brand[aria-current="true"] {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .theme-toggle {

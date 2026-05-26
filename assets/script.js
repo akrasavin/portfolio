@@ -1,6 +1,7 @@
 const root = document.documentElement;
 const toggle = document.querySelector('[data-theme-toggle]');
 const year = document.getElementById('year');
+const brandLink = document.querySelector('.brand');
 
 const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
 const sections = navLinks
@@ -39,17 +40,35 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+function clearActiveStates() {
+  navLinks.forEach(link => link.removeAttribute('aria-current'));
+  brandLink?.removeAttribute('aria-current');
+}
+
+function setActiveHero() {
+  clearActiveStates();
+  brandLink?.setAttribute('aria-current', 'true');
+}
+
 function setActiveNav(id) {
+  clearActiveStates();
+
   navLinks.forEach(link => {
     if (link.getAttribute('href') === `#${id}`) {
       link.setAttribute('aria-current', 'true');
-    } else {
-      link.removeAttribute('aria-current');
     }
   });
 }
 
 function updateActiveNav() {
+  const topThreshold = 80;
+  const reachedTop = window.scrollY <= topThreshold;
+
+  if (reachedTop) {
+    setActiveHero();
+    return;
+  }
+
   const reachedBottom =
     window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
@@ -98,7 +117,6 @@ const revealObserver = new IntersectionObserver(
 
 reveals.forEach(node => revealObserver.observe(node));
 
-// Lightbox
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
