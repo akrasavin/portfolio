@@ -131,7 +131,7 @@ h3 {
 }
 
 /* =========================
-   Header
+Header
 ========================= */
 
 .site-header {
@@ -168,6 +168,9 @@ h3 {
   letter-spacing: 0.01em;
   white-space: nowrap;
   flex-shrink: 0;
+  position: relative;
+  padding: 4px 0;
+  color: var(--muted);
 }
 
 .main-nav {
@@ -187,7 +190,9 @@ h3 {
   font-size: 0.95rem;
 }
 
-.main-nav a::after {
+.brand::after,
+.main-nav a::after,
+.footer-inner a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -200,20 +205,22 @@ h3 {
   transition: transform 180ms ease;
 }
 
+.brand:hover,
+.brand[aria-current="true"],
 .main-nav a:hover,
 .main-nav a[aria-current="true"],
-.brand[aria-current="true"] {
+.footer-inner a:hover,
+.footer-inner a:focus-visible {
   color: var(--text);
 }
 
+.brand:hover::after,
+.brand[aria-current="true"]::after,
 .main-nav a:hover::after,
-.main-nav a[aria-current="true"]::after {
+.main-nav a[aria-current="true"]::after,
+.footer-inner a:hover::after,
+.footer-inner a:focus-visible::after {
   transform: scaleX(1);
-}
-
-.brand[aria-current="true"] {
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
 }
 
 .theme-toggle {
@@ -455,6 +462,10 @@ h3 {
   gap: 16px;
 }
 
+/* =========================
+Footer
+========================= */
+
 .site-footer {
   padding: 0;
   border-top: 1px solid var(--line);
@@ -466,6 +477,14 @@ h3 {
   justify-content: space-between;
   min-height: 52px;
   gap: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-inner a {
+  position: relative;
+  display: inline-block;
+  padding: 4px 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
